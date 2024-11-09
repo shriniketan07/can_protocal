@@ -54,4 +54,4 @@ This project demonstrates how to use the CAN protocol with an Arduino Uno, MCP25
  - LiquidCrystal_I2C: For controlling the I2C LCD display.
 
 **Code Overview**
-This project reads data from the DHT sensor, formats it into a CAN message, and sends it over the CAN bus. Additionally, it displays the temperature and humidity readings on the I2C LCD scr
+This project reads data from the DHT sensor, formats it into a CAN message, and sends it over the CAN bus. Additionally, it displays the temperature and humidity readings on the I2C LCD 
