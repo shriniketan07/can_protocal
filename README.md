@@ -23,6 +23,8 @@ This project demonstrates how to use the CAN protocol with an Arduino Uno, MCP25
 ![Circuit Diagram](circuit-diagram.png)
 
 **Wiring**
+
+
 **1. MCP2515 CAN Bus Module to Arduino Uno**
  - VCC -> 5V (Arduino Uno)
  - GND -> GND (Arduino Uno)
