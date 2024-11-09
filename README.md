@@ -9,7 +9,9 @@ This project demonstrates how to use the CAN protocol with an Arduino Uno, MCP25
  - I2C LCD Display: Displays the temperature and humidity readings.
  - Jumper Wires: For connections.
  - Breadboard: For connecting components.
- - Power Supply: Typically USB power for Arduino Uno.
+ - Power Supply: Typically USB power for Arduino Uno
+
+   
 **Features**
  - CAN Communication: Transmits temperature and humidity data via the CAN bus.
  - Sensor Data: Reads temperature and humidity from the DHT sensor.
