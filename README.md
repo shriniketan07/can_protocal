@@ -1,4 +1,4 @@
-#CAN Protocol with Arduino Uno, MCP2515, DHT Sensor, and I2C LCD Display
+# CAN Protocol with Arduino Uno, MCP2515, DHT Sensor, and I2C LCD Display
 
 This project demonstrates how to use the CAN protocol with an Arduino Uno, MCP2515 CAN Bus Module, DHT sensor (temperature and humidity sensor), and I2C LCD display. The system reads the temperature and humidity from the DHT sensor and sends this data over the CAN bus to other devices, while displaying the current readings on the LCD.
 
