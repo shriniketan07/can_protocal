@@ -1,49 +1,53 @@
- CAN Bus protocol ,Interfacing MCP2515 CAN Bus Module with Arduino. 
- We will transmit the DHT11 Sensor data over a certain distance using the CAN protocol.
+#CAN Protocol with Arduino Uno, MCP2515, DHT Sensor, and I2C LCD Display
 
-Controller Area Network also known as CAN-BUS is a common industrial bus because of its long travel distance, 
-medium communication speed, and high reliability. It is commonly found on modern machine tools and as an automotive diagnostic bus.
+This project demonstrates how to use the CAN protocol with an Arduino Uno, MCP2515 CAN Bus Module, DHT sensor (temperature and humidity sensor), and I2C LCD display. The system reads the temperature and humidity from the DHT sensor and sends this data over the CAN bus to other devices, while displaying the current readings on the LCD.
 
-In modern Vehicle systems, there are more than 60 to 100 sensor units for sensing and exchanging information. 
-Similarly, car manufacturers are constantly making their cars smarter by adding features like Autonomous driving, Airbag system, ABS (Anti-braking System), 
-Telematics, Transmission Control, Battery management systems, Cruise control system, etc.
-To enable the transmission and receiving of the data at a very high-speed standard automotive communication protocols are required. 
-The standard communication protocols like UART, SPI, and I2C are not reliable for this system. Hence we need an automobile
-communication protocol like the CAN protocol for high-speed & 1000s of data transmission at a single time.
+**Components Used**
+ - Arduino Uno: Microcontroller for controlling the project.
+ - MCP2515 CAN Bus Module: CAN transceiver to send and receive CAN messages.
+ - DHT11 or DHT22 Sensor: Measures temperature and humidity.
+ - I2C LCD Display: Displays the temperature and humidity readings.
+ - Jumper Wires: For connections.
+ - Breadboard: For connecting components.
+ - Power Supply: Typically USB power for Arduino Uno.
+**Features**
+ - CAN Communication: Transmits temperature and humidity data via the CAN bus.
+ - Sensor Data: Reads temperature and humidity from the DHT sensor.
+ - Real-time Display: Displays current temperature and humidity on an I2C LCD.
+ - Modular Design: Easily expand the project to include more sensors or devices communicating over the CAN bus.
 
-CAN Bus Communication protocol using Microchip MCP2515 CAN Bus Module & Arduino Board.
-Using the pair of CAN Bus Module MCP2515, we will send the DHT11 Sensor data over a distance of a few centimeters. 
-Typically the communication speed for CAN ranges from 50 Kbps to 1Mbps and the distance can range from 40 meters at 1Mbps to 1000 meters at 50kpbs.
+**Circuit Diagram**
+
+![Circuit Diagram](circuit-diagram.jpg)
+
+**Wiring**
+**1. MCP2515 CAN Bus Module to Arduino Uno**
+ - VCC -> 5V (Arduino Uno)
+ - GND -> GND (Arduino Uno)
+ - CS -> Pin 10 (Arduino Uno)
+ - SCK -> Pin 13 (Arduino Uno)
+ - MOSI -> Pin 11 (Arduino Uno)
+ - MISO -> Pin 12 (Arduino Uno)
+ - INT -> Pin 2 (Arduino Uno)
+
+   
+**2. DHT11/DHT22 Sensor to Arduino Uno**
+ - VCC -> 5V (Arduino Uno)
+ - GND -> GND (Arduino Uno)
+ - Data -> Pin 8 (Arduino Uno)
 
 
-components required
-1. Arduino UNO Board	  -2
-2. CAN Module MCP2515	  -2
-3. I2C LCD Display	    -1	
-4. DHT11 Sensor	        -1	
-5. Jumper Wires 	      -30	
-6. Breadboard	          -2
+**3. I2C LCD to Arduino Uno**
+ - VCC -> 5V (Arduino Uno)
+ - GND -> GND (Arduino Uno)
+ - SDA -> SDA (Arduino Uno)
+ - SCL -> SCL (Arduino Uno)
 
 
-pin connections of arduino and mcp2515
+**Libraries Used**
+ - MCP_CAN: For interfacing with the MCP2515 CAN Bus module.
+ - DHT Sensor Library: For reading data from the DHT sensor.
+ - LiquidCrystal_I2C: For controlling the I2C LCD display.
 
-MCP2515 Pin -	Arduino Pin | 
-   VCC	- 5V | 
-   GND - GND | 
-   CS	 - D10 | 
-   SO	 - D12 |
-   SI	 - D11 | 
-   SCK - D13 | 
-   INT	- D2  | 
-
-Features and Specification of MCP2515:
-
-1. Uses High-speed CAN transceiver TJA1050
-2. Dimension: 40×28mm
-3. SPI control for expanding Multi CAN bus interface
-4. 8MHZ crystal oscillator
-5. 120Ω terminal resistance
-6. Has independent key, LED indicator, Power indicator
-7. Supports 1 Mb/s CAN operation
-8. Low current standby operation
-9. Up to 112 nodes can be connected
+**Code Overview**
+This project reads data from the DHT sensor, formats it into a CAN message, and sends it over the CAN bus. Additionally, it displays the temperature and humidity readings on the I2C LCD scr
