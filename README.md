@@ -49,7 +49,7 @@ This project demonstrates how to use the CAN protocol with an Arduino Uno, MCP25
 
 
 **Libraries Used**
- - MCP_CAN: For interfacing with the MCP2515 CAN Bus module.
+ - mcp2515: For interfacing with the MCP2515 CAN Bus module.
  - DHT Sensor Library: For reading data from the DHT sensor.
  - LiquidCrystal_I2C: For controlling the I2C LCD display.
 
