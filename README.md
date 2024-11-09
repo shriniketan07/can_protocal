@@ -27,14 +27,14 @@ components required
 
 pin connections of arduino and mcp2515
 
-MCP2515 Pin -	Arduino Pin
-   VCC	- 5V
-   GND - GND
-   CS	 - D10
-   SO	 - D12
-   SI	 - D11
-   SCK - D13
-   INT	- D2
+MCP2515 Pin -	Arduino Pin | 
+   VCC	- 5V | 
+   GND - GND | 
+   CS	 - D10 | 
+   SO	 - D12 |
+   SI	 - D11 | 
+   SCK - D13 | 
+   INT	- D2  | 
 
 Features and Specification of MCP2515:
 
